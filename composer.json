@@ -8,11 +8,8 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "8.0.*",
-        "symfony/dotenv": "8.0.*",
-        "symfony/flex": "^2",
         "symfony/framework-bundle": "8.0.*",
-        "symfony/runtime": "8.0.*",
-        "symfony/yaml": "8.0.*"
+        "symfony/runtime": "8.0.*"
     },
     "require-dev": {
     },
@@ -48,10 +45,9 @@
         "symfony/polyfill-php84": "*"
     },
     "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
+        "auto-scripts": [
+            "php index.php cache:clear"
+        ],
         "post-install-cmd": [
             "@auto-scripts"
         ],
